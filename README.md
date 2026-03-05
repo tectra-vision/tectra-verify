@@ -1,4 +1,3 @@
-"""
 # tectra-verify
 
 Open-source Python library for verifying content provenance using the [Tectra](https://tectra.vision) registry.
@@ -127,4 +126,3 @@ MIT — see [LICENSE](LICENSE).
 - [Documentation](https://tectra.vision/docs)
 - [PyPI](https://pypi.org/project/tectra-verify/)
 - [C2PA](https://c2pa.org) — Tectra is a Contributor Member
-"""
