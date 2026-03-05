@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tectra-verify"
+version = "0.1.0"
+description = "Open-source verification library for Tectra content provenance — extract watermarks, compute perceptual hashes, verify Merkle proofs and blockchain anchors. No API key required."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Tectra", email = "hello@tectra.vision" }]
+keywords = ["c2pa", "provenance", "content-authenticity", "watermark", "blockchain", "ai-detection"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Security :: Cryptography",
+]
+
+dependencies = [
+    "Pillow>=9.0.0",
+    "imagehash>=4.3.1",
+    "invisible-watermark>=0.2.0",
+    "requests>=2.28.0",
+    "numpy>=1.23.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov", "black", "ruff"]
+
+[project.urls]
+Homepage = "https://tectra.vision"
+Documentation = "https://tectra.vision/docs"
+Repository = "https://github.com/tectra-vision/tectra-verify"
+"Bug Tracker" = "https://github.com/tectra-vision/tectra-verify/issues"
+
+[project.scripts]
+tectra-verify = "tectra_verify.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tectra_verify"]
